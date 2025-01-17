@@ -3,11 +3,11 @@ import React from 'react'
 const ShopFiltering = ({filters, filtersState, setFiltersState, clearFilters}) => {
   return (
     <div className='space-y-5 flex-shrink-0'>
-        <h3>Filters</h3>
+        <h3>الفلاتر</h3>
 
-        {/* categories */}
+        {/* الفئات */}
         <div className='flex flex-col space-y-2'>
-            <h4 className='font-medium text-lg'>Category</h4>
+            <h4 className='font-medium text-lg'>الفئة</h4>
             <hr />
             {
                 filters.categories.map((category) => (
@@ -22,9 +22,9 @@ const ShopFiltering = ({filters, filtersState, setFiltersState, clearFilters}) =
             }
         </div>
 
-        {/* colors */}
+        {/* الألوان */}
         <div className='flex flex-col space-y-2'>
-            <h4 className='font-medium text-lg'>Color</h4>
+            <h4 className='font-medium text-lg'>اللون</h4>
             <hr />
             {
                 filters.colors.map((color) => (
@@ -39,9 +39,9 @@ const ShopFiltering = ({filters, filtersState, setFiltersState, clearFilters}) =
             }
         </div>
 
-        {/* pricing */}
+        {/* نطاق السعر */}
         <div className='flex flex-col space-y-2'>
-            <h4 className='font-medium text-lg'>Price Range</h4>
+            <h4 className='font-medium text-lg'>نطاق السعر</h4>
             <hr />
             {
                 filters.priceRanges.map((range) => (
@@ -57,8 +57,8 @@ const ShopFiltering = ({filters, filtersState, setFiltersState, clearFilters}) =
             }
         </div>
         
-        {/* clear filters */}
-        <button onClick={clearFilters} className='bg-primary py-1 px-4 text-white rounded'>Clear All Filters</button>
+        {/* مسح الفلاتر */}
+        <button onClick={clearFilters} className='bg-primary py-1 px-4 text-white rounded'>مسح كل الفلاتر</button>
     </div>
   )
 }

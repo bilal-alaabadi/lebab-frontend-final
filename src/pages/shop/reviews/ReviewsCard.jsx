@@ -24,7 +24,7 @@ const ReviewsCard = ({ productReviews }) => {
             <div>
                 {
                     reviews.length > 0 ? (<div>
-                        <h3 className='text-lg font-medium'>All comments...</h3>
+                        <h3 className='text-lg font-medium'>كل التعليقات</h3>
                         <div>
                             {
                                 reviews.map((review, index) => (
@@ -44,7 +44,7 @@ const ReviewsCard = ({ productReviews }) => {
                                 ))
                             }
                         </div>
-                    </div>) : <p>No reviews yet!</p>
+                    </div>) : <p>لا تعليق حتى الان</p>
                 }
             </div>
 
@@ -52,7 +52,7 @@ const ReviewsCard = ({ productReviews }) => {
             <div className='mt-12'>
                 <button
                     onClick={handleOpenReviewModal}
-                    className='px-6 py-3 bg-primary text-white rounded-md'>Add A Review</button>
+                    className='px-6 py-3 bg-primary text-white rounded-md'> أضفة تعليق</button>
             </div>
 
             {/* review modal  */}

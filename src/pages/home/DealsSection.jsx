@@ -1,34 +1,34 @@
 import React from 'react'
-import dealsImg from "../../assets/deals.png"
+import dealsImg from "../../assets/web-pic1-600x857 (1).png"
 const DealsSection = () => {
   return (
-    <section className='section__container deals__container'>
+    <section className='section__container deals__container bg-blue-50'>
         <div className='deals__image'>
             <img src={dealsImg} alt="" />
         </div>
 
         <div className='deals__content'>
-            <h5>Get Up To 20% Discount</h5>
-            <h4>Deals Of This Month</h4>
-            <p>Our Women's Fashion Deals of the Month are here to make your style dreams a reality without breaking the bank. Discover a curated collection of exquisite clothing, accessories, and footwear, all handpicked to elevate your wardrobe.</p>
-            <div className='deals__countdown flex-wrap'>
+            <h5 className='text-2xl font-bold text-gray-800'>احصل على خصم يصل إلى %20</h5>
+            <h4>عروض هذا الشهر</h4>
+            <p>عروض موضة الرجال العمانيين لهذا الشهر هنا لتحقيق أحلام أناقتك دون تكلفة باهظة. اكتشف مجموعة مختارة من الملابس التقليدية والعصرية، والإكسسوارات والأحذية، كلها مختارة بعناية لتعزيز خزانة ملابسك.</p>
+            {/* <div className='deals__countdown flex-wrap'>
                 <div className='deals__countdown__card'>
-                    <h4>14</h4>
-                    <p>Days</p>
+                    <h4></h4>
+                    <p></p>
                 </div>
                 <div className='deals__countdown__card'>
-                    <h4>20</h4>
-                    <p>Hours</p>
+                    <h4></h4>
+                    <p></p>
                 </div>
                 <div className='deals__countdown__card'>
-                    <h4>15</h4>
-                    <p>Mins</p>
+                    <h4></h4>
+                    <p></p>
                 </div>
                 <div className='deals__countdown__card'>
-                    <h4>05</h4>
-                    <p>Secs</p>
+                    <h4></h4>
+                    <p></p>
                 </div>
-            </div>
+            </div> */}
         </div>
     </section>
   )

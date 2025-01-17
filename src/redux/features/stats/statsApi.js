@@ -20,6 +20,6 @@ const statsApi =  createApi({
     })
 })
 
-export const {useGetUserStatsQuery, useGetAdminStatsQuery} = statsApi;
+export const {useGetUserStatsQuery,  useGetAdminStatsQuery} = statsApi;
 
 export default statsApi;

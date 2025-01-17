@@ -42,12 +42,12 @@ const PostAReview = ({isModalOpen, handleClose}) => {
   return (
     <div className={`fixed inset-0 bg-black/90 flex items-center justify-center z-40 px-2 ${isModalOpen ? 'block' : 'hidden'}`}>
         <div className='bg-white p-6 rounded-md shadow-lg w-96 z-50'>
-            <h2 className='text-lg font-medium mb-4'>Post A Review</h2>
+            <h2 className='text-lg font-medium mb-4'>انشر التعليق</h2>
 
             <div className='flex items-center mb-4'>
             {
-                [1, 2, 3, 4, 5].map((star) =>(
-                    <span 
+                [1, 2, 3, 4, 5].map((star,index) =>(
+                    <span key={index}
                     onClick={() => handleRating(star)}
                     className='cursor-pointer text-yellow-500 text-xl'>
                             {
@@ -66,10 +66,10 @@ const PostAReview = ({isModalOpen, handleClose}) => {
             <div className='flex justify-end gap-2'>
                 <button 
                 onClick={handleClose}
-                className='px-4 py-2 bg-gray-300 rounded-md'>Cancel</button>
+                className='px-4 py-2 bg-gray-300 rounded-md'>ألغي</button>
                 <button 
                 onClick={handleSubmit}
-                className='px-4 py-2 bg-primary text-white rounded-md'>Submit</button>
+                className='px-4 py-2 bg-primary text-white rounded-md'>سلم</button>
             </div>
         </div>
     </div>

@@ -31,18 +31,18 @@ const cartSlice = createSlice({
     },
     updateQuantity: (state, action) => {
       const products = state.products.map((product) => {
-        if(product._id === action.payload.id) {
-          if(action.payload.type === 'increment'){
+        if (product._id === action.payload.id) {
+          if (action.payload.type === 'increment') {
             product.quantity += 1;
-          } else if(action.payload.type === 'decrement'){
-            if(product.quantity > 1) {
-              product.quantity -= 1
+          } else if (action.payload.type === 'decrement') {
+            if (product.quantity > 1) {
+              product.quantity -= 1;
             }
           }
         }
         return product;
       });
-      
+
       state.selectedItems = setSelectedItems(state);
       state.totalPrice = setTotalPrice(state);
       state.tax = setTax(state);

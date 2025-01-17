@@ -3,7 +3,7 @@
 :root {
   --primary-color: #ed3849;
   --primary-color-dark: #d23141;
-  --primary-color-light: #f4e5ec;
+  --primary-color-light:  #eff6ff;
   --text-dark: #0f172a;
   --text-light: #64748b;
   --extra-light: #f8fafc;
@@ -165,11 +165,11 @@ nav {
 }
 
 .header__image img {
-  position: absolute;
-  left: 50%;
-  bottom: -5rem;
-  transform: translateX(-50%);
-  max-width: 500px;
+    position: absolute;
+    left: 65%;
+    bottom: -5rem;
+    transform: translateX(-50%);
+    max-width: 482px;
 }
 
 .categories__grid {
@@ -299,14 +299,16 @@ nav {
 
 .deals__image img {
   position: absolute;
-  left: 50%;
+  left: 35%;
   bottom: -5rem;
   transform: translateX(-50%);
-  max-width: 550px;
+  max-width: 350px;
 }
+
 
 .deals__content {
   max-width: 600px;
+  height: 340px;
   margin-right: auto;
 }
 
@@ -447,6 +449,43 @@ nav {
   font-weight: 800;
   font-family: var(--header-font);
   color: var(--text-dark);
+}
+
+
+/* تخصيص الطباعة */
+@media print {
+  body * {
+      visibility: hidden; /* إخفاء كل العناصر */
+  }
+
+  .print-modal, .print-modal * {
+      visibility: visible; /* إظهار النافذة المنبثقة فقط */
+  }
+
+  .print-modal {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      max-width: 100%;
+      box-shadow: none;
+      border: none;
+      padding: 20px;
+  }
+
+  .print-modal button {
+      display: none; /* إخفاء الأزرار عند الطباعة */
+  }
+
+  .print-modal h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+  }
+
+  .print-modal p {
+      font-size: 16px;
+      margin-bottom: 10px;
+  }
 }
 
 .footer__col p {
