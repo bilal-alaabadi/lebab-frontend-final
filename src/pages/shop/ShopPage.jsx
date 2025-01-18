@@ -24,6 +24,8 @@ const ShopPage = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [ProductsPerPage] = useState(8);
 
+    const [showFilters, setShowFilters] = useState(false); // حالة لعرض/إخفاء الفلاتر
+
     const { category, color, priceRange } = filtersState;
     const [minPrice, maxPrice] = priceRange.split('-').map(Number);
 
@@ -58,8 +60,6 @@ const ShopPage = () => {
     const startProduct = (currentPage - 1) * ProductsPerPage + 1;
     const endProduct = startProduct + products.length - 1;
 
-    // console.log("Products Data:", products); // فحص البيانات المرسلة من الخادم
-
     return (
         <>
             <section className='section__container bg-primary-light'>
@@ -69,16 +69,26 @@ const ShopPage = () => {
 
             <section className='section__container'>
                 <div className='flex flex-col md:flex-row md:gap-12 gap-8'>
+                    {/* زر عرض الفلاتر على الشاشات الصغيرة */}
+                    <button
+                        onClick={() => setShowFilters(!showFilters)}
+                        className='md:hidden bg-primary py-1 px-4 text-white rounded mb-4'
+                    >
+                        {showFilters ? 'إخفاء الفلاتر' : 'عرض الفلاتر'}
+                    </button>
+
                     {/* left side */}
-                    <ShopFiltering
-                        filters={filters}
-                        filtersState={filtersState}
-                        setFiltersState={setFiltersState}
-                        clearFilters={clearFilters}
-                    />
+                    <div className={`${showFilters ? 'block' : 'hidden'} md:block`}>
+                        <ShopFiltering
+                            filters={filters}
+                            filtersState={filtersState}
+                            setFiltersState={setFiltersState}
+                            clearFilters={clearFilters}
+                        />
+                    </div>
 
                     {/* right side */}
-                    <div>
+                    <div className='flex-1'>
                         <h3 className='text-xl font-medium mb-4'>
                             عرض المنتجات من {startProduct} إلى {endProduct} من أصل {totalProducts} منتج
                         </h3>

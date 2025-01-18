@@ -533,7 +533,7 @@ nav {
   .header__container {
     grid-template-columns: repeat(1, 1fr);
   }
-
+  
   .header__content {
     margin: auto;
     text-align: center;
@@ -600,7 +600,7 @@ nav {
   .banner__container {
     grid-template-columns: repeat(1, 1fr);
   }
-
+  
   .blog__grid {
     grid-template-columns: repeat(1, 1fr);
   }
